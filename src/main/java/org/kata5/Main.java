@@ -1,5 +1,6 @@
 package org.kata5;
 
+import org.kata5.logic.Calculation;
 import org.kata5.ui.UI;
 
 public class Main {
@@ -16,24 +17,9 @@ public class Main {
         String startIP = view.getStartAddress();
         String endIP = view.getEndAddress();
 
-        System.out.println("The IP-range includes the number of addresses: " + countAddresses(startIP, endIP));
-    }
+        Calculation calculation = new Calculation(startIP, endIP);
+        calculation.printResult();
 
-    public static long countAddresses(String startIP, String endIP) {
-        long start = ipToLong(startIP);
-        long end = ipToLong(endIP);
-        return end - start;
-    }
-
-    public static long ipToLong(String ipAddress) {
-        String[] octets = ipAddress.split("\\."); // Split by "."
-        long result = 0;
-
-        for (int i = 0; i < 4; i++) {
-            result = (result << 8) + Integer.parseInt(octets[i]);
-        }
-
-        return result;
     }
 
 }

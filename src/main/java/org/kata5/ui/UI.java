@@ -11,12 +11,12 @@ public class UI {
     }
 
     public UI(String startAddress, String endAddress) {
-        if (startAddress == null) {
-            startAddress = "10.0.0.0";
+        if (startAddress == null || startAddress.isEmpty()) {
+            this.startAddress = "10.0.0.0";
         }
         else { this.startAddress = startAddress; }
-        if (endAddress == null) {
-            endAddress = "10.0.1.0";
+        if (endAddress == null || endAddress.isEmpty()) {
+            this.endAddress = "10.0.1.0";
         }
         else { this.endAddress = endAddress; }
     }
@@ -45,7 +45,7 @@ public class UI {
                        "(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\." +
                        "(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\b";
 
-        //        "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b";
+        //        "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b"; // simpler, without check <= 255
 
         System.out.println("""
                 
