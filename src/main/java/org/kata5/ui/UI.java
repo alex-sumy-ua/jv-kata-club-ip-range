@@ -40,7 +40,12 @@ public class UI {
     public void handleUserInput() {
         Scanner scanner = new Scanner(System.in);
         String input;
-        String regex = "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b";
+        String regex = "\\b(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\." +
+                       "(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\." +
+                       "(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\." +
+                       "(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\b";
+
+        //        "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b";
 
         System.out.println("""
                 
@@ -68,6 +73,6 @@ public class UI {
             System.out.println("Incorrect end IP-address. Try again:");
         }
 
-        System.out.println("Thank you! IP-address are " + getStartAddress() + " ; " + getEndAddress());
+        System.out.println("Thank you! IP-addresses are " + getStartAddress() + " ; " + getEndAddress());
     }
 }
