@@ -8,6 +8,8 @@ public class UI {
     private String endAddress;
 
     public UI() {
+        this.startAddress = "10.0.0.0";
+        this.endAddress = "10.0.1.0";
     }
 
     public UI(String startAddress, String endAddress) {
