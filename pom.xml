@@ -4,7 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
     <groupId>org.kata5</groupId>
+=======
+    <groupId>org.example</groupId>
+>>>>>>> 74e265e6c37340340e3c7e3cdfb973280bb626ae
     <artifactId>jv-kata-club-ip-range</artifactId>
     <version>1.0-SNAPSHOT</version>
 
